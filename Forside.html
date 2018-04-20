@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <!-- HUSK AT UDFYLDE BESKRIVELSE TIL SEO-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>running | magazine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header id="main-header">
+        <section id="logo-burger">
+            <h1 id="logo"><a href="index.html">running | magazine</a></h1>
+            <label for="toggle">&#9776;</label>
+        </section>
+        <nav>
+            <input type="checkbox" id="toggle" class="hidden">
+            <!-- This has to be outside of #logo-burger to work. #main-nav cannot be selected when this is in a container -->
+            <ul id="main-nav">
+                <li><a class="active" href="#">Forside</a></li>
+                <li><a href="music.html">Løb &amp; musik</a></li>
+                <li><a href="Loebestil.html">Løbestil</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+     <!--slide show https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1/3</div>
+            <img src="images/naturrun.jpg" style="width:100%">
+            <div class="text"><strong>Løb i naturen</strong></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2/3</div>
+            <img src="images/stairs.jpg" style="width:100%">
+            <div class="text"><strong>Trappe-træning</strong></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3/3</div>
+            <img src="images/runningshoe.jpg" style="width:100%">
+            <div class="text"><strong>Løbesko</strong></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+
+    <!--slide-show-->
+
+    <section>
+        <h1>Motivation &amp; Motion</h1>
+        <p><strong>D</strong>et er ikke altid nemt at finde motivationen frem når man skal dyrke motion. Det er ofte svært at finde tid og overskud til at dyrke den motion man egentlig har lyst til. Vi vil derfor komme ind på hvad du kan gøre for at finde din indre løber frem og holde motivationen oppe.
+        </p>
+        <h3>Hvad er din undskyldning? </h3>
+        <p><strong>U</strong>ndskyldninger og overspringshandlinger er der nok af, når man skal yde noget der kræver lidt af os. Den klassiske undskyldning, når man bor i Danmark, er vejret. <br> Enten er det for koldt og blæsende eller for solrigt og stegende varmt. Ellers er man kommet træt og udkørt hjem fra arbejde eller skole og har ikke overskud til andet end at lægge sig på sofaen med fjernbetjeningen i hånden. Men hvorfor er det egentlig så svært at komme afsted? <br> Vi ved jo alle sammen at man har det SÅ godt bagefter. Overskuddet og energien er jo ikke til at overskygge af begejstringen over at løbeskoene ikke længere står fine og ubrugte, stadig i skotøjsæsken, i bundet af skabet når de sidste 100 meter hen til målet er nået. Men hvorfor er løbemotivationen så svær at finde? Og hvad kan vi gøre for at løbeskoene ikke føles så tung som en ridderbrynje?
+        </p>
+        <h3>Sæt dig et mål</h3>
+        <p><strong>F</strong>or langt de fleste kan et håndgribeligt mål være en stor motivation når det drejer sig om løb. Det kan enten være på løbeturen, hvor du ganske enkelt sætter en dagsorden for dagens træning. Det kan være ved fx at beslutte dig for at løbe en km. i et stræk eller løbe hen til det næste træ på vejen. Sæt dig et mål der kan hjælpe dig til at aflede dine tanker fra trætte ben og sidestik.</p>
+    </section>
+    
+    <footer>
+  <p>Posted by: Christina Damkjær</p>
+  
+</footer>
+
+</body>
+
+</html>
